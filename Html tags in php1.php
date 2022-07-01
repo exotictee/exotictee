@@ -2,6 +2,12 @@
 <html>
     <head>
         <title>PHP and HTML</title>
+        <!-- Sample 5 -->
+        <script type="text/javascript">
+            <?=
+            "alert('I am coming from PHP!')";
+            ?>
+        </script>
     </head>
     <body>
         <h1>Embed PHP in HTML</h1>
@@ -14,6 +20,22 @@
 
             echo "<p>Sample 1: This text is  printed from PHP</p>"
         ?>
+
+        <?= "<hr>" ?>
+
+            <p>
+                <?php
+                echo "Sample 2: This text is printed from PHP!";
+                ?>
+            </p>
+
+            <!-- Sample 3 -->
+            <p <?= 'style="color:red;"'?>>Sample 3: This is a red text!</p>
+
+            <!-- Sample 4 -->
+            <?= "<p>" ?>
+                Sample 4: This text is printed from PHP!
+            <?= "</P>" ?>
 
 
     </body>
