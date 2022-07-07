@@ -10,7 +10,7 @@
         </script>
     </head>
     <body>
-        <h1>Embed PHP in HTML</h1>
+       <h1>Embed PHP in HTML</h1>
 
         <!-- Sample 1 -->
         <?php echo 'Welcome to Krystal Digital Network Solutions'; ?>
@@ -37,6 +37,25 @@
                 Sample 4: This text is printed from PHP!
             <?= "</P>" ?>
 
+            <!-- white space -->
+            <?= 'This          is             a            Test'; ?>
+
+
+            <?="
+            <hr>
+
+            <p>
+
+                you are free to type
+
+                anything inside this
+
+                block.
+            </p>
+
+            "?>
+
+            <?= "hello " . ($_GET['name']); ?>
 
     </body>
 </html>
