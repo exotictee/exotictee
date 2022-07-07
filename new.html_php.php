@@ -52,11 +52,24 @@
                     }
                 ?>
 
+        </ul>
 
+        <ul>
 
-
+                <?php foreach ($person as $key => $feature) : ?>
+                    <li><strong><?= $key; ?></strong> <?= $feature; ?></li>
+                <?php endforeach; ?>
 
         </ul>
+
+        <ul>
+
+                <?php foreach ($task as $key => $feature) : ?>
+                    <li><strong><?= $key; ?></strong> <?= $feature; ?></li>
+                <?php endforeach; ?>
+
+        </ul>
+
 
 
 
