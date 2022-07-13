@@ -22,6 +22,38 @@
 
         <ul>
 
+            <li>
+                <strong>Due Date:</strong> <?= $task ['time']; ?>
+            </li>
+
+            <li>
+                <strong>Responsibility:</strong> <?= $task ['assigned to']; ?>
+            </li>
+
+            <li>
+                <strong>Status:</strong> <?= $task ['completed'] ? 'complete' : 'incomplete'; ?>
+            </li>
+
+        </ul>
+
+        <hr>
+
+        <h1>Task For The Day</h1>
+
+        <ul>
+            <?php foreach ($task as $heading => $value) : ?>
+
+            <li>
+
+                <strong><?= ucwords($heading); ?>: </strong> <?= $value; ?>
+
+            </li>
+            <?php endforeach; ?>
+
+        </ul>
+
+        <ul>
+
             <?php  foreach ($names as $name)  : ?>
                      <li><?= $name; ?></li>
             <?php endforeach; ?>
@@ -69,6 +101,8 @@
                 <?php endforeach; ?>
 
         </ul>
+
+
 
 
 

@@ -27,15 +27,15 @@ $person = [
 $person['name'] = 'Timi';
 
 
-var_dump($person);
+// var_dump($person);
 
 $task = [
     'title' => 'Go to the mall',
     'time' => 'Noon',
     'assigned to' => 'My sis',
-    'completed' => 'Yes'
+    'completed' => true
 ];
 
-var_dump($task);
+// var_dump($task);
 
 require 'new.html_php.php';
