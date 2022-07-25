@@ -13,7 +13,7 @@ $animals = ['Dog', 'Cat'];
  //dumper('hello', 'big', 'world');
 
  function checkAge($age) {
-  return ($age < 21) ? false : true; 
+  return ($age < 21) ? false : true;
 };
 
 
