@@ -1,9 +1,9 @@
 <?php
-
+/*
 $host = 'localhost';
 $user = 'root';
 $password = '160571017Exo@';
-$dbname = 'pdo post';
+$dbname = 'exoticable';
 
 // Set DSN
 $dsn = 'mysql:host=' . $host .';dbname='. $dbname;
@@ -13,32 +13,31 @@ $pdo = new PDO($dsn, $user, $password);
 
 #PRDO QUERY
 
-$stmt = $pdo->query('SELECT * FROM post');
+$stmt = $pdo->query('SELECT * FROM etable');
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-    echo $row['title'] . '<br>';
+    echo $row['Task'] . '<br>';
 }
+*/
 
 
 
 
 
 
-/*
 try {
-$pdo = new PDO("mysql:host=127.0.0.1 b ;dbname=mytodo", 'root', '160571017Exo@');
+$pdo = new PDO('mysql:host=localhost;dbname=exoticable', 'root', '160571017Exo@');
 } catch(PDOException $e) {
-    die($e->getMessage());
+  die($e->getMessage());
 }
 
-$statement = $pdo->prepare('select * from todos');
+$statement = $pdo->prepare('select * from etable');
 
 $statement->execute();
 
-// $results = $statement->fetchAll(PDO::FETCH_OBJ);
+$task = $statement->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($statement->fetchAll());
+var_dump($task[0]->Description);
 
+require 'index_view.php';
 
-require 'new.html.php';
-*/
