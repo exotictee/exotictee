@@ -22,22 +22,21 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 
 
+require 'index_view.php';
 
 
+//try {
+$pdo = new PDO('mysql:host=localhost;dbname=MyTodo', 'root', '160571017Exo@');
+//} catch(PDOException $e) {
+ // die($e->getMessage());
+//}
 
-try {
-$pdo = new PDO('mysql:host=localhost;dbname=exoticable', 'root', '160571017Exo@');
-} catch(PDOException $e) {
-  die($e->getMessage());
-}
-
-$statement = $pdo->prepare('select * from etable');
+$statement = $pdo->prepare('select * from todos');
 
 $statement->execute();
 
 $task = $statement->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($task[0]->Description);
+var_dump($task);
 
-require 'index_view.php';
-
+require 'function.php';
