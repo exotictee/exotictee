@@ -35,7 +35,7 @@ $posts = [
    // return ['title' => $post->title];
 // }, $posts);
 
-
+ 
 $posts = array_map(function($post) {
     return (array) $post;
 }, $posts);
